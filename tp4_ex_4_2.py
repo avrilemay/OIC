@@ -137,7 +137,7 @@ with st.form("GPS"):
         lon_map = -110.326982
         info = gpsphoto.GPSInfo((lat_map, lon_map), alt=10)
         # modification 
-        photo.modGPSData(info, "/Users/Avrile/Desktop/TP4/bernard_arnault.jpg")
+        photo.modGPSData(info, path+mon_image)
         st.write("Les coordonnées GPS ont été mis à jour.")
         for EXIF in sorted(img.list_all()): 
             st.write(EXIF,'=',{img.get(EXIF)})
@@ -146,7 +146,7 @@ with st.form("GPS"):
     blank_GPS = st.form_submit_button("Supprimer les coordonnées GPS")
     if blank_GPS:
         # modification 
-        photo.stripData("/Users/Avrile/Desktop/TP4/bernard_arnault.jpg")
+        photo.stripData(path+mon_image)
         st.write("Les coordonnées GPS ont été supprimés.")
         for EXIF in sorted(img.list_all()): 
             st.write(EXIF,'=',{img.get(EXIF)})
