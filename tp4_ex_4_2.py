@@ -130,7 +130,7 @@ with st.form("GPS"):
     lat_map = 48.945506
     lon_map = 2.362878
 
-    taggeg_GPS = st.form_submit_button("Mettre à jour les coordonnées GPS")
+    taggeg_GPS = st.form_submit_button("Mettre à jour les coordonnées GPS (cliquer 2 fois pour actualiser)")
     if taggeg_GPS:
         # actualisation coordonnées GPS
         lat_map = 24.140505
@@ -143,7 +143,7 @@ with st.form("GPS"):
             st.write(EXIF,'=',{img.get(EXIF)})
 
 
-    blank_GPS = st.form_submit_button("Supprimer les coordonnées GPS")
+    blank_GPS = st.form_submit_button("Supprimer les coordonnées GPS (cliquer 2 fois pour actualiser)")
     if blank_GPS:
         # modification 
         photo.stripData(path+mon_image)
