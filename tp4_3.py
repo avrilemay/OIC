@@ -82,7 +82,7 @@ st.write("La somme des 20 premières décimales de Pi est égal à", pi_20)
 
 # calculer les 12 puissance 2 premières décimales
 pi_144 = (float("0"+str(pi[1:146])))
-st.write("La somme des 20 premières décimales de Pi est égal à", pi_144)
+st.write("La somme des 144 premières décimales de Pi est égal à", pi_144)
 
 #*************************PARTIE 4*******************************/
 st.header(":blue[Question 4. La somme des entiers naturels est égale à -1/12.]")
