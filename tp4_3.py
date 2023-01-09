@@ -78,11 +78,11 @@ st.header(":blue[Question 3. Additionner les décimales de Pi.]")
 # calculer la somme des 20 premières décimales 
 pi_20 = (float("0"+str(pi[1:22])))
 # je commence à partir du "." en [1]
-st.write("La somme des 20 premières décimales de Pi est égal à", pi_20)
+st.write("La somme des 20 premières décimales de Pi est égale à", pi_20)
 
 # calculer les 12 puissance 2 premières décimales
 pi_144 = (float("0"+str(pi[1:146])))
-st.write("La somme des 144 premières décimales de Pi est égal à", pi_144)
+st.write("La somme des 144 premières décimales de Pi est égale à", pi_144)
 
 #*************************PARTIE 4*******************************/
 st.header(":blue[Question 4. La somme des entiers naturels est égale à -1/12.]")
