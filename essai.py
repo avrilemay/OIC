@@ -113,14 +113,14 @@ with st.form("Formulaire"):
             st.write(EXIF,'=',{img.get(EXIF)})
 
 # j'enregistre les modifications
-with open(path+mon_image, 'wb') as new_image_file:
+with open(mon_image, 'wb') as new_image_file:
     new_image_file.write(img.get_file())
 
 #*************************PARTIE 2*******************************/
 
 st.header(":blue[Partie 2. Modifier les coordonnées GPS d'une image]")
 from GPSPhoto import gpsphoto
-photo = gpsphoto.GPSPhoto(path+mon_image)
+photo = gpsphoto.GPSPhoto(mon_image)
 
 with st.form("GPS"):
     st.write("Modifier les données GPS de la photo")
@@ -138,7 +138,7 @@ with st.form("GPS"):
         lon_map = -110.326982
         info = gpsphoto.GPSInfo((lat_map, lon_map), alt=10)
         # modification 
-        photo.modGPSData(info, path+mon_image)
+        photo.modGPSData(info, mon_image)
         st.write("Les coordonnées GPS ont été mis à jour.")
         for EXIF in sorted(img.list_all()): 
             st.write(EXIF,'=',{img.get(EXIF)})
@@ -147,7 +147,7 @@ with st.form("GPS"):
     blank_GPS = st.form_submit_button("Supprimer les coordonnées GPS (cliquer 2 fois pour actualiser)")
     if blank_GPS:
         # modification 
-        photo.stripData(path+mon_image)
+        photo.stripData(mon_image)
         st.write("Les coordonnées GPS ont été supprimés.")
         for EXIF in sorted(img.list_all()): 
             st.write(EXIF,'=',{img.get(EXIF)})
