@@ -13,9 +13,13 @@
 
 import streamlit as st
 from PIL import Image
+import os
 
-# à modifier pour tester le code 
-path = "/Users/Avrile/Desktop/S2._OIC/latex/"
+# Obtention du chemin du répertoire courant
+current_dir = os.getcwd()
+
+path = os.path.join(current_dir, "")
+
 # image utilisée
 mon_image = "bernard_arnault.jpg"
 
